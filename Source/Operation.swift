@@ -446,6 +446,8 @@ open class HTTP: Operation {
                 req.addValue(value, forHTTPHeaderField: key)
             }
         }
+        req.addValue("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36", forHTTPHeaderField: "user-agent")
+        req.addValue("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36", forHTTPHeaderField: "User-Agent")
         return HTTP(req as URLRequest, isDownload: isDownload)
     }
     
